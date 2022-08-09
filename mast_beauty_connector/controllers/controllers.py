@@ -17,6 +17,7 @@ class MastBeautyConnectorController(http.Controller):
     def get_contacts(self):
         student_rec = request.env['res.partner'].search([])
         std_list = []
+        print("this is just an example")
         for rec in student_rec:
             std_dic = {
                 'id': rec.id,
