@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "32032f61-b6ce-4715-aea9-a504905c3f96",
+		"name": "Mast Beauty Connector",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21517734"
+	},
+	"item": [
+		{
+			"name": "authenticate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"json\":\"2.0\",\"params\":{\"db\":\"db-enterprise-July-22\",\"login\":\"admin\",\"password\":\"admin\"}}"
+				},
+				"url": {
+					"raw": "http://localhost:8070/web/session/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"web",
+						"session",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_product_category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"json\":\"2.0\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8070/get/product/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"get",
+						"product",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_product_category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"json\":\"2.0\",\"params\":{\"name\":\"All/Saless\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8070/create/product/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"create",
+						"product",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "web_get_product_template",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"json\":\"2.0\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8070/web/get/product/template",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"web",
+						"get",
+						"product",
+						"template"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_product_template",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"json\": \"2.0\",\n    \"params\": {\n        \"name\": \"Marina\",\n        \"sale_price\":400.00,\n        \"cost_price\":350.00,\n        \"variants\": [{\n            \"attribute\":\"color\",\"values\":[\"red\",\"white\"]\n        }]\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8070/create/product/template",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"create",
+						"product",
+						"template"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
