@@ -18,6 +18,7 @@ class MastBeautyConnectorController(http.Controller):
         student_rec = request.env['res.partner'].search([])
         std_list = []
         print("this is just an example")
+        print('this is zubair example')
         for rec in student_rec:
             std_dic = {
                 'id': rec.id,
